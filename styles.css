@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
   color: rgb(33, 10, 54);
   background: linear-gradient(
     45deg,
@@ -17,8 +16,7 @@ nav {
     text-align: center;
     padding: 1em 0 0;
     color: #fff;
-    font-size: 2.3em;
-    font-weight: 600;
+    font: 600 2.3em "Quicksand", sans-serif;
     letter-spacing: 5px;
 }
 .hidden {
@@ -53,7 +51,7 @@ nav {
 
 /* animation */
 /* The animation code */
-@keyframes example {
+@keyframes rotate {
   0% {
     transform: rotateY(0deg);
   }
@@ -64,16 +62,13 @@ nav {
 
 /* The element to apply the animation to */
 .animate {
-  animation-name: example;
+  animation-name: rotate;
   animation-duration: 1s;
 }
 
+
 #controls {
   display: none;
-}
-
-.d-flex {
-  display: flex;
 }
 
 .video-control-box {
