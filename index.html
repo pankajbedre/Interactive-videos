@@ -19,7 +19,7 @@
     <nav>Qrious</nav>
     <section class="container all-center">
       <div class="video-frame">
-        <video id="video" class="video" width="320px" height="240px" autoplay>
+        <video id="video" onload="playVideo()" class="video" width="320px" height="240px" autoplay>
           <source
             class="video-src"
             src="assets/videos/Home.mp4"
@@ -27,8 +27,10 @@
           />
         </video>
         <script>
-          document.getElementById('video').play();
-      </script>
+          function playVideo(params) {
+            document.getElementById("video").play();
+          }
+        </script>
         <div class="video-control-box all-center" id="controls">
           <div class="control-inner">
             <div class="play-icon-box all-center">
@@ -36,7 +38,7 @@
                 ><img src="assets/icons/play.svg" alt=""
               /></span>
             </div>
-            
+
             <div>
               <div id="Home" class="buttons hidden">
                 Home<img class="icon" src="assets/icons/home.svg" alt="" />
@@ -45,10 +47,9 @@
                 Design<img class="icon" src="assets/icons/pencil.svg" alt="" />
               </div>
               <div id="Photography" class="buttons">
-                Photography <img class="icon" src="assets/icons/camera.svg" alt="" />
+                Photography
+                <img class="icon" src="assets/icons/camera.svg" alt="" />
               </div>
-              
-             
             </div>
           </div>
         </div>
