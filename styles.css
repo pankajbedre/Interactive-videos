@@ -40,13 +40,14 @@ nav {
   padding: 3.5em 0;
   width: 640px;
   height: 370px;
-  box-shadow: 6px 6px 30px rgba(10, 0, 27, 0.555);
+  box-shadow: 6px 6px 30px rgba(10, 0, 27, 0.432);
   border-radius: 20px;
 }
 
 @media only screen and (max-width: 600px) {
   .video {
     width: 350px;
+    height: 270px;
   }
 }
 
@@ -109,7 +110,7 @@ nav {
     margin-left: .8em;
 }
 .play-icon-box {
-  margin: 4em 0;
+  margin: 2.5em 0;
 }
 .play-icon {
   cursor: pointer;
