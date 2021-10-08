@@ -1,6 +1,5 @@
 let onPage = 'Home'
 
-
 $(".play-icon").click(() => {
   if ($(".video").get(0).paused == false) {
     $(".video").get(0).pause();
@@ -12,8 +11,8 @@ $(".play-icon").click(() => {
 });
 
 $(".buttons").click(function (e) {
-
   $(".video-frame").addClass("animate");
+
   let url = "assets/videos/" + $(this).attr("id") + ".mp4";
   $("#video source").attr("src", url);
   $("#video")[0].load();
@@ -26,18 +25,20 @@ $(".buttons").click(function (e) {
     onPage = $(this).attr("id")
     if(onPage=='Home'){
       $("#Home").addClass("hidden")
-      $("#Design").removeClass("hidden") 
-      $("#Photography").removeClass("hidden")
+      $("#Design, #Photography").removeClass("hidden") 
     } else if(onPage=='Design'){
-      $("#Home").removeClass("hidden")
       $("#Design").addClass("hidden") 
-      $("#Photography").removeClass("hidden")
+      $("#Home, #Photography").removeClass("hidden")
     } else {
-      $("#Home").removeClass("hidden")
-      $("#Design").removeClass("hidden") 
+      $("#Home, #Design").removeClass("hidden") 
       $("#Photography").addClass("hidden")
     } 
   }, 500);
-
 });
 
+$("#video").mousemove(function() {
+  $("#controls").css("display", "flex")
+  setTimeout(() => {
+    $("#controls").css("display", "none")
+  }, 2500);
+})

@@ -71,8 +71,8 @@ nav {
 #controls {
   display: none;
 }
-#video:hover ~ #controls,
-#controls:hover {
+
+.d-flex {
   display: flex;
 }
 
